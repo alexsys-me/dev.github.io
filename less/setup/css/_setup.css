@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoBold.eot");
+  src: local("☺"), url("../fonts/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoMedium.eot");
+  src: local("☺"), url("../fonts/RobotoMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoMedium.woff") format("woff"), url("../fonts/RobotoMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoRegular.eot");
+  src: local("☺"), url("../fonts/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/RobotoLight.eot");
+  src: local("☺"), url("../fonts/RobotoLight.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #292929;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  height: 100%;
+}
+body.fix {
+  overflow: hidden !important;
+}
+body.fix .overlay {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  background: #000000a1;
+  z-index: 99;
+}
+@media (max-width: 375px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+}
+footer,
+header,
+section {
+  flex: 100%;
+  width: 100%;
+  order: 10;
+}
+section {
+  padding: 90px 0;
+}
+@media (max-width: 1020px) {
+  section {
+    padding: 70px 0;
+  }
+}
+@media (max-width: 480px) {
+  section {
+    padding: 50px 0;
+  }
+}
+.wrap,
+h2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+.wrap {
+  padding: 5px 15px;
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 5px 20px;
+  }
+}
+.unwrap,
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+@media (max-width: 1020px) {
+  .unwrap,
+  .row {
+    flex-wrap: wrap;
+  }
+}
+.c6 {
+  flex: 30%;
+  max-width: 32%;
+}
+@media (max-width: 1020px) {
+  .c6 {
+    flex: 50%;
+    max-width: 47%;
+  }
+}
+@media (max-width: 480px) {
+  .c6 {
+    flex: 100%;
+    max-width: 98%;
+  }
+}
+.grey {
+  background: #F5F5F5;
+}

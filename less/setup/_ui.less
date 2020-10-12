@@ -1,0 +1,377 @@
+a {
+    color: @link_color;
+
+    &:hover,
+    &:focus {
+        color: @hover;
+        text-decoration: underline;
+    }
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 50px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+
+    @media (max-width: 375px) {
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 600;
+    color: @black;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 60px;
+
+    @media (max-width: 480px) {
+        margin-bottom: 40px;
+        padding: 0 15px;
+        b{border:none!important;}
+    }
+
+    @media (max-width: 375px) {
+        font-size: 28px;
+        line-height: 30px;
+      
+    }
+
+    b {
+        border-bottom: 3px solid @main;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    color: @black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+// - BUTTONS
+.btn {
+    width: 90%;
+    max-width: 255px;
+    height: 62px;
+    line-height: 40px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 0px;
+    white-space: nowrap;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        max-width: 100%;
+    }
+    @media (max-width:375px) {
+        font-size: 16px;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.submit {
+        background: @main;
+        border: 1px solid @main;
+        color: #fff;
+
+        &:hover {
+            background: @hover;
+            border: 1px solid @hover;
+        }
+    }
+
+    &.clean {
+        background: transparent;
+        color: @main;
+        border: 1px solid @main;
+
+        &:hover {
+            background: #e8e8e8;
+        }
+    }
+
+    &.white {
+        background: transparent;
+        color: white;
+        border: 1px solid white;
+
+        &:hover {
+            background: @hover;
+            border: 1px solid @hover;
+        }
+    }
+}
+
+//-----FORMS 
+
+// - Placeholder
+:-ms-input-placeholder,
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+    color: red !important;
+    font-size: 14px;
+
+    &:focus {
+        opacity: 0.5;
+    }
+}
+
+// - Input
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    background: #FDFDFD;
+    border: 1px solid @main;
+    font-size: 15px;
+    color: @input;
+    padding: 20px;
+    height: 60px;
+    @media (max-width: 480px) {
+        padding: 10px;
+    }
+    &:focus {
+        border: 1px solid @main  !important;
+        border-radius: 0px;
+        outline: none !important;
+
+        &:-ms-input-placeholder,
+        &::-webkit-input-placeholder,
+        & :-ms-input-placeholder,
+        &:-moz-placeholder {
+            opacity: 0.5 !important;
+        }
+    }
+}
+
+// - Chekbox, Radio
+//-Style 
+/* <label><input type="checkbox"> <span>Флажок </span></label> */
+/* <label for="rb2"><input type="radio" id="rb2">Переключатель </label>*/
+
+
+label {
+    position: relative;
+    display: flex;
+
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    justify-content: flex-start;
+
+    &+span {
+        position: relative;
+        line-height: 25px;
+        cursor: pointer;
+
+        &:before {
+            // Deff-Style-input
+            width: 25px;
+            height: 25px;
+            border: 1px solid @main;
+            background-color: #ffffff;
+            content: "";
+            float: left;
+            display: block;
+            margin-right: 10px;
+
+            @media (max-width: 480px) {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+
+    &:checked {
+        &+span {
+            &:before {
+                // Chek-Style-input
+                border: 1px solid @main;
+            }
+
+            &:after {
+                // Chek-Style-element
+                color: @main;
+                font-family: "icomoon" !important;
+                position: absolute;
+                margin: auto;
+                left: 3px;
+                top: 0;
+                bottom: 0;
+
+                @media (max-width: 480px) {
+                    font-size: 18px;
+                    left: 7px;
+                    top: 5px;
+                }
+            }
+        }
+    }
+}
+
+input[type="radio"]+span:before {
+    border-radius: 50%;
+}
+
+
+//-Aperance
+/*
+    input[type=checkbox] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 25px;
+        height: 25px;
+        margin: 0 5px 0 0;
+        border: 1px solid @main;
+        display: inline-block;
+        padding: 0;
+        vertical-align: top;
+        outline: none;
+        transition: background 0.3s ease;   
+        cursor: pointer;
+        // background: url(../images/elements/) 0 0 no-repeat;
+
+        &:checked {
+            border: 1px solid @main;
+            background: url(../images/elements/check.png) 0 0 no-repeat;
+            cursor: pointer;
+        }
+
+        &:disabled {
+            cursor: default;
+            opacity: 0.6;
+        }
+    }
+    input[type=radio] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 25px;
+        height: 25px;
+        margin: 0 5px 0 0;
+        border: 1px solid @main;
+        border-radius: 50%;
+        display: inline-block;
+        padding: 0;
+        vertical-align: top;
+        outline: none;
+        transition: background 0.3s ease;   
+        cursor: pointer;
+        // background: url(../images/elements/) 0 0 no-repeat;
+
+        &:checked {
+            border: 1px solid @main;
+            background: url(../images/elements/radio.png) 0 0 no-repeat;
+            cursor: pointer;
+        }
+
+        &:disabled {
+            cursor: default;
+            opacity: 0.6;
+        }
+    }
+*/
+
+// - Range
+input[type="range"] {
+    -webkit-appearance: none;
+    height: 5px;
+    outline: none;
+    background: #BBBBBB;
+    border: 1px solid #D4D4D4;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        background: @main;
+        cursor: pointer;
+        transition: .1s;
+    }
+}
+
+// - Date
+
+// - Select
+select {
+    font-size: 16px;
+    position: relative;
+    /* -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    */
+    background-color: #fff;
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {}
+
+    &:after {
+        content: "◣";
+        display: block;
+        //  border: 1px solid #000; 
+        padding: 5px;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        z-index: 1;
+        margin-top: -3px;
+    }
+}
+
+
+// - textarea
+textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 0;
+    border: 0;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    height: 150px;
+}
+
+
+//-----SCROLLBAR 

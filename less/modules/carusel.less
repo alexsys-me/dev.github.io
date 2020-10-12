@@ -1,0 +1,62 @@
+.owl-carousel .item{
+    border: 1px solid @main;
+    background: #fff;
+    padding-bottom: 20px;
+    a {
+        display: block;
+      }
+}
+
+.owl-dots{
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    .owl-dot{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid @main!important;
+        margin:0 10px;
+        &.active{
+            background: @main;
+        }
+    }
+    @media (max-width: 1020px) {
+        display: none;
+    }   
+}
+
+
+.owl-nav {
+    position: absolute;
+    z-index: -1;
+    top: 30%;
+    width: 100%;
+    .owl-prev { left:-120px}
+    .owl-next { right: -120px;}
+
+    span {
+        background: @main;
+        display: block;
+        margin: 7px !important;
+        height: 85%;
+        color: #fff;
+        font-size: 48px;
+    }
+
+    button {
+        border: 1px solid @main !important;
+        width: 80px;
+        height: 80px;
+        opacity: .5;
+        top:30%;
+        position: absolute;
+        &:hover {
+            opacity: 1;
+        }
+
+    }
+    @media (max-width: 1020px) {
+        display: none;
+    }
+}

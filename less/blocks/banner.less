@@ -1,0 +1,73 @@
+.banner {
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  padding-top: 90px;
+  width: 100%;
+
+  h1 {
+    @media (max-width: 480px) {
+      font-size: 44px;
+    }
+
+    span {
+      display: block;
+      text-transform: none;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 50px;
+
+      @media (max-width: 480px) {
+        line-height: 30px;
+        font-size: 26px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &_search {
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 35px;
+    justify-content: space-between;
+
+
+    @media (max-width: 480px) {
+      padding: 23px 16px;
+      max-width: 90%;
+    }
+  }
+
+  &_block {
+    flex: 1;
+    padding: 0 10px;
+
+    input {
+      width: 100%;
+    }
+
+    @media (max-width: 1020px) {
+      flex: 50%;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 480px) {
+      flex: 100%;
+      max-width: 100%;
+
+      &.dateb {
+        max-width: 50%;
+      }
+    }
+  }
+}
+.bradcrumb{  
+  order: 2;
+  border-left: 10px solid @main;
+  margin: 40px auto;
+  padding: 0;padding-left: 10px;
+  a{ float: left; margin: auto; font-weight: bold; color: #656565; text-decoration: none;&:hover{color:@main}}
+  p{ margin: auto;    float: left; margin-left: 5px;}
+}
