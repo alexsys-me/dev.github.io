@@ -125,3 +125,67 @@ h2 {
 .grey {
   background: #F5F5F5;
 }
+.owl-carousel .item {
+  border: 1px solid #25B4B1;
+  background: #fff;
+  padding-bottom: 20px;
+}
+.owl-carousel .item a {
+  display: block;
+}
+.owl-dots {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dots .owl-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #25B4B1 !important;
+  margin: 0 10px;
+}
+.owl-dots .owl-dot.active {
+  background: #25B4B1;
+}
+@media (max-width: 1020px) {
+  .owl-dots {
+    display: none;
+  }
+}
+.owl-nav {
+  position: absolute;
+  z-index: -1;
+  top: 30%;
+  width: 100%;
+}
+.owl-nav .owl-prev {
+  left: -120px;
+}
+.owl-nav .owl-next {
+  right: -120px;
+}
+.owl-nav span {
+  background: #25B4B1;
+  display: block;
+  margin: 7px !important;
+  height: 85%;
+  color: #fff;
+  font-size: 48px;
+}
+.owl-nav button {
+  border: 1px solid #25B4B1 !important;
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+  top: 30%;
+  position: absolute;
+}
+.owl-nav button:hover {
+  opacity: 1;
+}
+@media (max-width: 1020px) {
+  .owl-nav {
+    display: none;
+  }
+}
