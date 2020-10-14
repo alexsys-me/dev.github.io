@@ -1,8 +1,10 @@
-//@import url(../setup/_setup.less);
+@import url(../setup/_setup.less);
+
 .content-block {
   display: flex;
   order: 10;
   align-items: flex-start;
+
   @media (max-width: 480px) {
     flex-wrap: wrap;
   }
@@ -12,6 +14,11 @@
   flex: 1 1 30%;
   padding-right: 30px;
   border-right: 1px solid #ececec;
+  @media (max-width: 480px) { 
+    border-right:none;
+    padding-right: 0px;
+    padding-bottom: 15px;
+  }
 }
 
 .rigthside {
@@ -19,8 +26,10 @@
   padding-left: 30px;
   max-width: 900px;
   margin-bottom: 90px;
+
   @media (max-width: 480px) {
-    padding:0;  max-width: 100%;
+    padding: 0;
+    max-width: 100%;
   }
 }
 
@@ -28,8 +37,10 @@
   overflow: hidden;
   max-width: 900px;
   max-width: 100%;
+
   @media (max-width: 480px) {
     flex-wrap: wrap;
+   
   }
 
   .subtitle {
@@ -41,6 +52,11 @@
     line-height: 35px;
     margin-bottom: 20px;
     padding-top: 30px;
+
+    @media (max-width: 480px) {
+      text-align: center;
+      font-size: 24px;
+    }
   }
 
   .row {
@@ -54,10 +70,15 @@
     flex: 25%;
     text-decoration: none;
     overflow: hidden;
+
     @media (max-width: 480px) {
-      flex: 100%;
-      img{ width:100%;}
+      flex: 100%; margin-bottom: 15px;
+
+      img {
+        width: 100%;
+      }
     }
+
     p {
       margin: 15px;
       font-weight: 500;
@@ -101,7 +122,9 @@
   justify-content: flex-start;
   position: relative;
   margin-bottom: 20px;
-
+  @media (max-width: 480px) { 
+    margin-top: 40px;
+  }
   h4 {
     position: absolute;
     top: 0px;
@@ -145,11 +168,19 @@
       max-width: 320px;
       margin-right: 45px;
       margin-top: -40px;
+
+      @media (max-width: 480px) {
+        float: none;  max-width:100%;
+      }
     }
 
     .review_title {
       font-size: 16px;
       display: block;
+
+      @media (max-width: 480px) {
+        margin-top: 10px;
+      }
     }
 
     .review_date {
@@ -165,14 +196,26 @@
   }
 }
 
-.dosug{
-   margin-bottom: -190px;
+.dosug {
+  margin-bottom: -190px;
 }
-.reviewing { margin-top: 80px;}
+
+.reviewing {
+  margin-top: 80px;
+
+  @media (max-width: 480px) {
+    margin-top: 120px;
+  }
+}
+
 .item-dosug {
   background-color: #fff;
   border: 1px solid #DEDEDE;
   margin: 5px;
+
+  @media (max-width: 480px) {
+    margin-bottom: 10px;
+  }
 
   .more-dusug {
     padding: 20px;
@@ -222,5 +265,18 @@
 
   &-video {
     margin: 5px;
+
+  }
+}
+
+.kategory{
+  .news_bird{
+    order: 10;
+  }
+  .banner{
+      height: 250px;   
+      padding-top: 30px;
+      span{    font-size: 20px;
+        line-height: 30px;    margin-top: 30px;}
   }
 }

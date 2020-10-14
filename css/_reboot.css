@@ -12,8 +12,11 @@ body {
   max-width: 100%;
   box-sizing: border-box;
 }
-body {
-  overflow-x: hidden;
+@media (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 [tabindex="-1"]:focus {
   outline: none !important;
