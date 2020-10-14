@@ -2,6 +2,7 @@
 .banner {
   position: relative;
   padding-top: 90px;
+  overflow: hidden;
   width: 100%;
   img{ position: absolute; z-index:1; height:100%; top:0; opacity: .7;}
   &_title{
@@ -9,6 +10,8 @@
   }
   @media (max-width: 480px) { 
     padding-top: 30px;
+    height: auto!important;
+    img{    max-width: initial;margin-left: -50%;}
   }
   h1 {
     @media (max-width: 480px) {

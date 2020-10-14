@@ -357,6 +357,13 @@ h2 {
   overflow: hidden;
   max-height: 400px;
 }
+@media (max-width: 480px) {
+  .item-gall img {
+    width: auto!important;
+    height: 250px;
+    max-width: initial;
+  }
+}
 .item-gall .review_test {
   position: absolute;
   background: #fff;

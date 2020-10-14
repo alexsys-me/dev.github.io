@@ -1,4 +1,4 @@
-//@import url(../setup/_setup.less);
+@import url(../setup/_setup.less);
 
 .colapside {
   list-style: none;
@@ -216,6 +216,14 @@
   padding: 12px 40px 12px 20px;
   cursor: pointer;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &_subheader {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 22px;
+  }
 
   &.sub {
     background-color: #CCF1F0;
@@ -226,7 +234,10 @@
     margin: 1px 0;
     font-weight: normal;
     font-size: 15px;
-
+    .accordion-header_subheader {
+      color:#25B4B1;margin-right: 28px;
+      margin-top: 3px;
+    }
     &:after {
       color: #25B4B1;
     }

@@ -53,6 +53,11 @@ body.fix .overlay {
   background: #000000a1;
   z-index: 99;
 }
+@media (max-width: 480px) {
+  body img {
+    max-width: 100%;
+  }
+}
 @media (max-width: 375px) {
   body {
     max-width: 100%;
@@ -309,6 +314,13 @@ h2 {
   padding: 12px 40px 12px 20px;
   cursor: pointer;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.accordion-header_subheader {
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 22px;
 }
 .accordion-header.sub {
   background-color: #CCF1F0;
@@ -319,6 +331,11 @@ h2 {
   margin: 1px 0;
   font-weight: normal;
   font-size: 15px;
+}
+.accordion-header.sub .accordion-header_subheader {
+  color: #25B4B1;
+  margin-right: 28px;
+  margin-top: 3px;
 }
 .accordion-header.sub:after {
   color: #25B4B1;
