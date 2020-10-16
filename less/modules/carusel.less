@@ -25,18 +25,21 @@
         }
     }
     @media (max-width: 1020px) {
-        display: none;
+       // display: none;
     }   
 }
 
 .owl-nav {
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     top: 30%;
     width: 100%;
     .owl-prev { left:-120px}
     .owl-next { right: -120px;}
-
+    @media (max-width:480px) {
+        .owl-prev { left:-50px}
+        .owl-next { right: -50px;}
+    }
     span {
         background: @main;
         display: block;
@@ -59,6 +62,6 @@
 
     }
     @media (max-width: 1020px) {
-        display: none;
+        // display: none;
     }
 }

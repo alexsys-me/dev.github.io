@@ -135,7 +135,7 @@ h2 {
   order: 10;
   align-items: flex-start;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .content-block {
     flex-wrap: wrap;
   }
@@ -144,6 +144,14 @@ h2 {
   flex: 1 1 30%;
   padding-right: 30px;
   border-right: 1px solid #ececec;
+}
+@media (max-width: 768px) {
+  .leftside {
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-right: 50px;
+  }
 }
 @media (max-width: 480px) {
   .leftside {
@@ -164,6 +172,16 @@ h2 {
     max-width: 100%;
   }
 }
+@media (max-width: 1024px) {
+  .rigthside {
+    max-width: 688px;
+  }
+}
+@media (max-width: 768px) {
+  .rigthside {
+    max-width: 90%;
+  }
+}
 .last-rielt {
   overflow: hidden;
   max-width: 900px;
@@ -172,6 +190,7 @@ h2 {
 @media (max-width: 480px) {
   .last-rielt {
     flex-wrap: wrap;
+    overflow: visible;
   }
 }
 .last-rielt .subtitle {
@@ -386,4 +405,13 @@ h2 {
   font-size: 20px;
   line-height: 30px;
   margin-top: 30px;
+}
+.rielt_img {
+  overflow: hidden;
+  max-height: 150px;
+}
+@media (max-width: 480px) {
+  .rielt_img {
+    max-height: 220px;
+  }
 }

@@ -237,6 +237,11 @@ h2 {
   float: left;
   margin-left: 5px;
 }
+@media (max-width: 768px) {
+  .bradcrumb {
+    max-width: 86%;
+  }
+}
 @media (max-width: 480px) {
   .bradcrumb {
     display: none;
